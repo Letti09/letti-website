@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get a Free Quote | Letti Building Solutions | Adelaide</title>
+<meta name="description" content="Get a free quote from Letti Building Solutions. Adelaide carpenter, plasterer and handyman Paul Spagnoletti — licensed (BLD 271132), insured, and straight with you about pricing." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --dark: #333333;
+  --darker: #242424;
+  --accent: #8c2020;
+  --accent-hover: #701818;
+  --light: #f5f6fa;
+  --white: #ffffff;
+  --text: #333744;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+}
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+/* NAV */
+nav { background: var(--darker); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+.nav-logo { color: var(--white); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.3px; text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-right { display: flex; gap: 20px; align-items: center; }
+.nav-right a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+.nav-right a:hover, .nav-right a.active { color: var(--white); }
+.nav-cta { background: var(--accent) !important; color: var(--white) !important; padding: 9px 20px; border-radius: 6px; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--accent-hover) !important; }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, var(--darker) 0%, #3a3a3a 100%); color: var(--white); padding: 64px 24px 56px; text-align: center; }
+.hero-badge { display: inline-block; background: rgba(140,32,32,0.2); border: 1px solid rgba(140,32,32,0.4); color: #e07b7b; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; max-width: 600px; margin: 0 auto 16px; }
+.hero h1 span { color: var(--accent); }
+.hero p { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 500px; margin: 0 auto; }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--light); padding: 64px 24px; }
+.container { max-width: 900px; margin: 0 auto; }
+.section-label { color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--dark); margin-bottom: 40px; line-height: 1.25; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.step { background: var(--white); border-radius: 12px; padding: 28px 24px; border: 1px solid var(--border); position: relative; }
+.step-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--accent); color: var(--white); border-radius: 50%; font-size: 0.85rem; font-weight: 800; margin-bottom: 14px; }
+.step h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+.step p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+.step-connector { display: none; }
+@media (min-width: 768px) {
+  .steps { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* FORM SECTION */
+.form-section { padding: 64px 24px; background: var(--white); }
+.form-wrap { max-width: 680px; margin: 0 auto; }
+.form-intro { margin-bottom: 36px; }
+.form-intro p { color: var(--text-light); font-size: 0.95rem; margin-top: 8px; }
+
+/* TRUST BAR */
+.trust-bar { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 36px; padding: 20px 24px; background: var(--light); border-radius: 12px; border: 1px solid var(--border); }
+.trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: var(--text); }
+.trust-icon { font-size: 1.1rem; }
+
+/* FORM */
+form { display: grid; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+label span.req { color: var(--accent); margin-left: 2px; }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(140,32,32,0.08);
+}
+textarea { resize: vertical; min-height: 120px; }
+select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px; padding-right: 40px; }
+
+/* FILE UPLOAD */
+.file-upload-wrap { border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.file-upload-wrap:hover { border-color: var(--accent); background: rgba(140,32,32,0.02); }
+.file-upload-wrap input[type="file"] { display: none; }
+.file-upload-label { display: block; cursor: pointer; }
+.upload-icon { font-size: 1.8rem; margin-bottom: 6px; }
+.upload-text { font-size: 0.88rem; color: var(--text-light); }
+.upload-text strong { color: var(--accent); }
+
+/* SUBMIT */
+.submit-btn { background: var(--accent); color: var(--white); border: none; padding: 16px 32px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; transition: background 0.2s, transform 0.1s; letter-spacing: 0.2px; }
+.submit-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.form-note { font-size: 0.82rem; color: var(--text-light); text-align: center; margin-top: 8px; }
+
+/* FOOTER */
+footer { background: var(--darker); color: rgba(255,255,255,0.5); text-align: center; padding: 28px 24px; font-size: 0.85rem; }
+footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 8px; }
+footer a:hover { color: var(--accent); }
+.footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; max-width: 1100px; margin: 0 auto 20px; }
+.footer-logo { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+.footer-logo span { color: var(--accent); }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+
+
+/* MOBILE NAV */
+.nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; padding: 4px 8px; line-height: 1; }
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-right { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--darker); flex-direction: column; padding: 8px 24px 20px; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); z-index: 999; }
+  .nav-right.open { display: flex; }
+  .nav-right a:not(.nav-cta) { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.85); }
+  .nav-right .nav-cta { margin-top: 14px; text-align: center; border-radius: 6px; }
+  .footer-top { flex-direction: column; text-align: center; }
+  .trust-bar { flex-direction: column; gap: 12px; }
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17194411054"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17194411054');
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Letti <span>Building Solutions</span></a>
+  <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="areas.html">Areas</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="nav-cta active">Send A Request</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Free, No Obligation</div>
+  <h1>Get a <span>Free Quote</span> from Paul</h1>
+  <p>Describe the job, attach a photo if you've got one, and Paul will be in touch promptly with a straight answer on price and timing.</p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-label">Simple Process</div>
+    <div class="section-title">How It Works</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Send Your Request</h3>
+        <p>Fill in the form below. Describe the job in your own words — a photo helps but isn't required.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Paul Gets Back to You</h3>
+        <p>Paul reviews your request and follows up promptly — either by phone or email, whichever you prefer.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Get Your Quote</h3>
+        <p>For most jobs Paul can quote on-site after a quick look. No hidden costs, no surprises — just an honest upfront price.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+  <div class="form-wrap">
+    <div class="form-intro">
+      <div class="section-label">Send A Request</div>
+      <div class="section-title" style="margin-bottom:0;">Tell Paul About the Job</div>
+      <p>All quotes are free. Paul aims to respond to every enquiry the same day.</p>
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-item"><span class="trust-icon">✅</span> Free quotes, no obligation</div>
+      <div class="trust-item"><span class="trust-icon">🛡️</span> Licensed BLD 271132 &amp; insured</div>
+      <div class="trust-item"><span class="trust-icon">⭐</span> 5.0 from 202 reviews on HiPages</div>
+      <div class="trust-item"><span class="trust-icon">📍</span> Adelaide-wide</div>
+    </div>
+
+    
+    <div style="text-align:center;margin-bottom:28px;padding:14px;background:var(--light);border-radius:8px;border:1px solid var(--border);">
+      <span style="font-size:0.85rem;color:var(--text-light);">Prefer email? Reach Paul directly at </span><a href="mailto:paul@lettibuildingsolutions.com.au" style="color:var(--accent);font-weight:600;font-size:0.85rem;">paul@lettibuildingsolutions.com.au</a>
+    </div>
+    <form name="quote-request" action="thank-you.html" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="quote-request" />
+      <p style="display:none"><label>Don't fill this: <input name="bot-field" /></label></p>
+      <div class="form-row">
+        <div>
+          <label for="name">Your Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g. Sarah Johnson" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 04XX XXX XXX" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" />
+        </div>
+        <div>
+          <label for="suburb">Your Suburb <span class="req">*</span></label>
+          <input type="text" id="suburb" name="suburb" placeholder="e.g. Henley Beach" required />
+        </div>
+      </div>
+      <div>
+        <label for="service">Type of Work <span class="req">*</span></label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a service...</option>
+          <option>Carpentry &amp; Timber Work</option>
+          <option>Plastering &amp; Gyprock</option>
+          <option>Property Maintenance</option>
+          <option>Renovation &amp; Fit-Out</option>
+          <option>Handyman &amp; General Repairs</option>
+          <option>Not sure — describe below</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Describe the Job <span class="req">*</span></label>
+        <textarea id="message" name="message" placeholder="Tell Paul what needs doing — as much or as little detail as you have. Don't worry if you're not sure exactly what's needed." required></textarea>
+      </div>
+      <div>
+        <label>Photos (Optional)</label>
+        <div class="file-upload-wrap" onclick="document.getElementById('photos').click()">
+          <label class="file-upload-label" for="photos">
+            <div class="upload-icon">📷</div>
+            <div class="upload-text"><strong>Click to attach photos</strong><br>A photo of the job helps Paul give you a more accurate quote</div>
+          </label>
+          <input type="file" id="photos" name="photos" accept="image/*" multiple />
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Send My Request to Paul →</button>
+      <p class="form-note">By submitting you agree to Paul contacting you about this job. No spam — ever.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">Letti <span>Building Solutions</span></div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="https://hipages.com.au/connect/lettibuildingsolutions" target="_blank">HiPages</a>
+      <a href="https://www.instagram.com/letti.buildingsolutions/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/lettibuildingsolutions" target="_blank">Facebook</a>
+    </nav>
+  </div>
+  <div>SA Builder's Licence BLD 271132 &nbsp;·&nbsp; ABN 63 771 076 406 &nbsp;·&nbsp; Adelaide, SA</div>
+  <div style="margin-top:6px;">© 2026 Letti Building Solutions. All rights reserved.</div>
+</footer>
+
+<script>
+// Show filename when photo selected
+document.getElementById('photos').addEventListener('change', function() {
+  const count = this.files.length;
+  const uploadText = document.querySelector('.upload-text');
+  if (count > 0) {
+    uploadText.innerHTML = '<strong>' + count + ' photo' + (count > 1 ? 's' : '') + ' selected</strong><br><span style="color:var(--accent)">Click to change</span>';
+  }
+});
+</script>
+
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-right').classList.toggle('open');
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('nav')) {
+    document.querySelector('.nav-right').classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
