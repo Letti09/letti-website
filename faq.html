@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ | Letti Building Solutions | Adelaide Carpenter & Handyman</title>
+<meta name="description" content="Common questions about Letti Building Solutions — quotes, licensing, areas covered, job types, NDIS and more. Adelaide carpenter and handyman Paul Spagnoletti." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --dark: #333333;
+  --darker: #242424;
+  --accent: #8c2020;
+  --accent-hover: #701818;
+  --light: #f5f6fa;
+  --white: #ffffff;
+  --text: #333744;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+}
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+/* NAV */
+nav { background: var(--darker); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+.nav-logo { color: var(--white); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.3px; text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-right { display: flex; gap: 20px; align-items: center; }
+.nav-right a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+.nav-right a:hover, .nav-right a.active { color: var(--white); }
+.nav-cta { background: var(--accent) !important; color: var(--white) !important; padding: 9px 20px; border-radius: 6px; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--accent-hover) !important; }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, var(--darker) 0%, #3a3a3a 100%); color: var(--white); padding: 72px 24px 64px; text-align: center; }
+.hero-badge { display: inline-block; background: rgba(140,32,32,0.2); border: 1px solid rgba(140,32,32,0.4); color: #e07b7b; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; max-width: 640px; margin: 0 auto 16px; }
+.hero h1 span { color: var(--accent); }
+.hero p { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 520px; margin: 0 auto; }
+
+/* CONTAINER */
+.container { max-width: 800px; margin: 0 auto; }
+.section-label { color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--dark); margin-bottom: 14px; line-height: 1.25; }
+
+/* FAQ CATEGORIES */
+.faq-block { padding: 64px 24px; }
+.faq-block:nth-child(even) { background: var(--light); }
+.faq-block:nth-child(odd) { background: var(--white); }
+
+.faq-category-label { display: inline-flex; align-items: center; gap: 10px; background: var(--light); border: 1px solid var(--border); border-radius: 8px; padding: 8px 16px; font-size: 0.82rem; font-weight: 700; color: var(--text-light); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 28px; }
+.faq-category-label span { font-size: 1.1rem; }
+
+/* FAQ ACCORDION ITEMS */
+.faq-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; background: var(--white); overflow: hidden; transition: box-shadow 0.2s; }
+.faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.faq-question { width: 100%; background: none; border: none; padding: 22px 24px; text-align: left; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s; }
+.faq-question:hover { color: var(--accent); }
+.faq-question.open { color: var(--accent); }
+.faq-icon { font-size: 1.2rem; font-weight: 400; flex-shrink: 0; transition: transform 0.2s; color: var(--accent); }
+.faq-question.open .faq-icon { transform: rotate(45deg); }
+.faq-answer { display: none; padding: 0 24px 22px; font-size: 0.95rem; color: var(--text-light); line-height: 1.8; }
+.faq-answer.open { display: block; }
+.faq-answer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.faq-answer a:hover { text-decoration: underline; }
+
+/* CTA BANNER */
+.cta-banner { background: linear-gradient(135deg, var(--darker) 0%, #3a3a3a 100%); padding: 72px 24px; text-align: center; color: var(--white); }
+.cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+.cta-banner p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.btn-primary { display: inline-block; background: var(--accent); color: var(--white); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: background 0.2s, transform 0.1s; }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+/* FOOTER */
+footer { background: var(--darker); color: rgba(255,255,255,0.5); text-align: center; padding: 28px 24px; font-size: 0.85rem; }
+footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 8px; }
+footer a:hover { color: var(--accent); }
+.footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; max-width: 1100px; margin: 0 auto 20px; }
+.footer-logo { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+.footer-logo span { color: var(--accent); }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .nav-right a:not(.nav-cta) { display: none; }
+  .footer-top { flex-direction: column; text-align: center; }
+}
+
+/* MOBILE NAV */
+.nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; padding: 4px 8px; line-height: 1; }
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-right { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--darker); flex-direction: column; padding: 8px 24px 20px; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); z-index: 999; }
+  .nav-right.open { display: flex; }
+  .nav-right a:not(.nav-cta) { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.85); }
+  .nav-right .nav-cta { margin-top: 14px; text-align: center; border-radius: 6px; }
+  .footer-top { flex-direction: column; text-align: center; }
+  .trust-bar { flex-direction: column; gap: 12px; }
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17194411054"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17194411054');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you charge for quotes?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. I'll come out, have a look, and give you an honest, upfront price — free, no obligation."}
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. SA Builder's Licence BLD 271132, fully insured for public liability. You can verify the licence yourself on the SA Building Commission website if you want peace of mind."}
+    },
+    {
+      "@type": "Question",
+      "name": "What areas of Adelaide do you cover?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Adelaide-wide — from the beaches through to the eastern suburbs. If you're not sure whether your suburb is covered, just ask."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you take on small jobs, or only big renovations?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Both. I'll do a single ceiling repair or a full room reno — whatever's on your list. No job's too small."}
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you get to a job?",
+      "acceptedAnswer": {"@type": "Answer", "text": "I get back to enquiries promptly and I'm straight with you about timing — if I can't fit you in fast, I'll tell you rather than leave you guessing."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with property managers and NDIS clients?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. I do rental property maintenance, insurance repairs and end-of-lease work for landlords and property managers, and I'm NDIS welcome for self- or plan-managed clients."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you supply materials or do I need to organise them?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Paul can source and supply materials, or install materials you've already purchased — just let him know when you enquire. He'll be upfront about what makes most sense for your job."}
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I'm not happy with the work?",
+      "acceptedAnswer": {"@type": "Answer", "text": "If something's not right before Paul leaves, he fixes it. The job isn't finished until you're satisfied with the result."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can you fix a sagging or damaged ceiling?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes — sagging and damaged ceilings are one of Paul's most common jobs. He'll diagnose the cause (water damage, age, structural movement) and fix it properly, not just patch over it."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do after-hours or weekend work?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Get in touch and ask — Paul will be straight with you about availability. For urgent make-safe work, he'll do his best to help quickly."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Letti <span>Building Solutions</span></a>
+  <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="areas.html">Areas</a>
+    <a href="faq.html" class="active">FAQ</a>
+    <a href="contact.html" class="nav-cta">Send A Request</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Common Questions</div>
+  <h1>Questions About <span>Working With Paul</span></h1>
+  <p>Straight answers about quotes, licensing, what jobs we take on, and everything else people usually want to know before getting in touch.</p>
+</section>
+
+<!-- GETTING STARTED -->
+<section class="faq-block">
+  <div class="container">
+    <div class="faq-category-label"><span>💬</span> Getting Started</div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Do you charge for quotes? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">No. Paul will come out, have a look at the job, and give you an honest upfront price — free, no obligation. If it's a straightforward job, he can often give a rough ballpark over the phone or by email first.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">How do I get in touch? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">The easiest way is to <a href="contact.html">fill in the contact form</a> — describe the job, attach a photo if it helps, and Paul will get back to you promptly. You can also find Letti Building Solutions on <a href="https://hipages.com.au/connect/lettibuildingsolutions" target="_blank">HiPages</a>.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">What information should I include in my enquiry? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">A short description of the job, your suburb, and a photo if you have one. That's usually enough for Paul to give you an initial response. The more detail the better — but don't worry if you're not sure exactly what you need, just describe what you're seeing and he'll work it out.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">How quickly can you get to a job? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Paul gets back to enquiries promptly and is straight with you about timing. If he can't fit you in quickly, he'll tell you rather than leave you waiting. For urgent make-safe works, he'll do his best to help fast.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LICENSING & TRUST -->
+<section class="faq-block">
+  <div class="container">
+    <div class="faq-category-label"><span>🛡️</span> Licensing & Trust</div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Are you licensed and insured? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Yes. Paul holds SA Builder's Licence <strong>BLD 271132</strong> and is fully insured for public liability. You can verify the licence yourself on the SA Building Commission website if you'd like peace of mind before hiring.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Can I verify the builder's licence? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Yes — search licence number BLD 271132 on the <a href="https://www.cbs.sa.gov.au/building-work" target="_blank">Consumer and Business Services SA website</a>. Always a good idea to check before hiring any tradie.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">What's your ABN? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">ABN 63 771 076 406. You can verify this on the <a href="https://www.abr.business.gov.au/" target="_blank">ABN Lookup website</a>.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">What happens if something goes wrong on the job? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Paul is fully insured for public liability — your property is covered. And if something's not right with the work before he leaves, he fixes it. The job isn't done until you're satisfied.</div>
+    </div>
+  </div>
+</section>
+
+<!-- JOBS & SERVICES -->
+<section class="faq-block">
+  <div class="container">
+    <div class="faq-category-label"><span>🔧</span> Jobs & Services</div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Do you take on small jobs, or only big renovations? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Both. Paul will do a single ceiling repair or a full room reno — no job is too small. If you've got a list of smaller jobs, he can often knock them all out in one visit.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Can you fix a sagging or damaged ceiling? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Yes — sagging and damaged ceilings are one of the most common jobs Paul does. He'll diagnose the root cause (water damage, age, structural movement) and fix it properly rather than just patching over the problem. Check out the <a href="services.html#plastering">Plastering & Gyprock</a> page for more detail.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Do you supply materials or do I need to organise them? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Paul can source and supply everything, or install materials you've already purchased — whichever suits you. Just mention it when you enquire and he'll factor it into the quote.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Can you do IKEA or flat pack assembly and installation? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Yes — flat pack assembly, cabinet installation, and shelving is a regular job. Paul will install it properly: level, secure, and finished neatly.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Do you do after-hours or weekend work? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Get in touch and ask — Paul will be straight with you about what's available. Availability varies depending on current workload.</div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS & CLIENTS -->
+<section class="faq-block">
+  <div class="container">
+    <div class="faq-category-label"><span>📍</span> Areas & Clients</div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">What areas of Adelaide do you cover? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Adelaide-wide — from the beach suburbs (Henley Beach, West Beach, Glenelg) through to the inner suburbs (Mile End, Woodville, Payneham) and beyond. If you're not sure whether your suburb is covered, just ask — there's a good chance the answer is yes.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Do you work with property managers and landlords? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Yes — Paul works with property managers and landlords across Adelaide for rental maintenance, end-of-lease repairs, insurance repairs and make-safe works. Prompt response, professional communication, and reliable follow-through.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Are you NDIS registered? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Paul is NDIS welcome for self- and plan-managed clients requiring home maintenance, repairs, or minor home modifications. Get in touch to discuss your specific needs.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">Do you work with insurance companies on repair claims? <span class="faq-icon">+</span></button>
+      <div class="faq-answer">Yes — Paul can work on insurance repair jobs and provide the documentation required. Get in touch with the job details and he'll advise on the process.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Still Got a Question?</h2>
+  <p>Just ask — Paul will give you a straight answer, no sales pitch.</p>
+  <a href="contact.html" class="btn-primary">Send Paul a Message →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">Letti <span>Building Solutions</span></div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Get a Quote</a>
+      <a href="https://hipages.com.au/connect/lettibuildingsolutions" target="_blank">HiPages</a>
+      <a href="https://www.instagram.com/letti.buildingsolutions/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/lettibuildingsolutions" target="_blank">Facebook</a>
+    </nav>
+  </div>
+  <div>SA Builder's Licence BLD 271132 &nbsp;·&nbsp; ABN 63 771 076 406 &nbsp;·&nbsp; Adelaide, SA</div>
+  <div style="margin-top:6px;"><a href="mailto:paul@lettibuildingsolutions.com.au" style="color:rgba(255,255,255,0.5);">paul@lettibuildingsolutions.com.au</a></div>
+  <div style="margin-top:6px;">© 2026 Letti Building Solutions. All rights reserved.</div>
+</footer>
+
+<script>
+function toggle(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-question.open').forEach(b => {
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('open');
+  });
+  // Open this one if it wasn't open
+  if (!isOpen) {
+    btn.classList.add('open');
+    answer.classList.add('open');
+  }
+}
+</script>
+
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-right').classList.toggle('open');
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('nav')) {
+    document.querySelector('.nav-right').classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
