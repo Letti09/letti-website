@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Get a Free Quote | Letti Building Solutions | Adelaide</title>
-<meta name="description" content="Get a free quote from Letti Building Solutions. Adelaide carpenter, plasterer and handyman Paul Spagnoletti — licensed (BLD 271132), insured, and straight with you about pricing." />
+<title>Free Building Quote Adelaide | Carpenter &amp; Plasterer | Letti</title>
+<meta name="description" content="Request a free, no-obligation quote from Paul, licensed Adelaide carpenter (BLD 271132). Serving western, northern &amp; inner suburbs. 5.0★ on hipages." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -97,7 +97,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 /* FILE UPLOAD */
 .file-upload-wrap { border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
 .file-upload-wrap:hover { border-color: var(--accent); background: rgba(140,32,32,0.02); }
-.file-upload-wrap input[type="file"] { display: none; }
+.file-upload-wrap { cursor: default; }
 .file-upload-label { display: block; cursor: pointer; }
 .upload-icon { font-size: 1.8rem; margin-bottom: 6px; }
 .upload-text { font-size: 0.88rem; color: var(--text-light); }
@@ -106,6 +106,16 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 /* SUBMIT */
 .submit-btn { background: var(--accent); color: var(--white); border: none; padding: 16px 32px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; transition: background 0.2s, transform 0.1s; letter-spacing: 0.2px; }
 .submit-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.field-help { display: block; font-size: 0.8rem; color: var(--text-light); margin-top: 6px; }
+.field-warn[hidden] { display: none; }
+.field-warn { display: block; font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 6px; }
+.choice-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.choice-row label { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 10px 16px; border: 1.5px solid var(--border); border-radius: 8px; font-weight: 500; cursor: pointer; }
+.choice-row input { accent-color: var(--accent); width: 18px; height: 18px; }
+.check-label { display: flex; align-items: flex-start; gap: 10px; font-weight: 500; cursor: pointer; }
+.check-label input { accent-color: var(--accent); width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
+.photo-inputs { display: grid; gap: 8px; margin-top: 10px; }
+.photo-inputs input[type="file"] { font-family: 'Inter', sans-serif; font-size: 0.85rem; width: 100%; }
 .form-note { font-size: 0.82rem; color: var(--text-light); text-align: center; margin-top: 8px; }
 
 /* FOOTER */
@@ -158,7 +168,7 @@ gtag('config', 'AW-17194411054');
 <section class="hero">
   <div class="hero-badge">Free, No Obligation</div>
   <h1>Get a <span>Free Quote</span> from Paul</h1>
-  <p>Describe the job, attach a photo if you've got one, and Paul will be in touch promptly with a straight answer on price and timing.</p>
+  <p>Describe the job, attach a photo if you've got one, and Paul will get back to you within 24 hours with a straight answer on price and timing.</p>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -175,7 +185,7 @@ gtag('config', 'AW-17194411054');
       <div class="step">
         <div class="step-number">2</div>
         <h3>Paul Gets Back to You</h3>
-        <p>Paul reviews your request and follows up promptly — either by phone or email, whichever you prefer.</p>
+        <p>Paul reviews your request and gets back to you within 24 hours — by call, SMS or email, whichever you prefer.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
@@ -192,14 +202,14 @@ gtag('config', 'AW-17194411054');
     <div class="form-intro">
       <div class="section-label">Send A Request</div>
       <div class="section-title" style="margin-bottom:0;">Tell Paul About the Job</div>
-      <p>All quotes are free. Paul aims to respond to every enquiry the same day.</p>
+      <p>All quotes are free. Paul aims to get back to every enquiry within 24 hours.</p>
     </div>
 
     <div class="trust-bar">
       <div class="trust-item"><span class="trust-icon">✅</span> Free quotes, no obligation</div>
       <div class="trust-item"><span class="trust-icon">🛡️</span> Licensed BLD 271132 &amp; insured</div>
       <div class="trust-item"><span class="trust-icon">⭐</span> 5.0 from 202 reviews on HiPages</div>
-      <div class="trust-item"><span class="trust-icon">📍</span> Adelaide-wide</div>
+      <div class="trust-item"><span class="trust-icon">📍</span> Western, northern &amp; inner Adelaide</div>
     </div>
 
     
@@ -208,25 +218,34 @@ gtag('config', 'AW-17194411054');
     </div>
     <form name="quote-request" action="thank-you.html" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="quote-request" />
+      <input type="hidden" name="subject" id="form-subject" data-remove-prefix value="Website quote request" />
       <p style="display:none"><label>Don't fill this: <input name="bot-field" /></label></p>
       <div class="form-row">
         <div>
           <label for="name">Your Name <span class="req">*</span></label>
-          <input type="text" id="name" name="name" placeholder="e.g. Sarah Johnson" required />
+          <input type="text" id="name" name="name" placeholder="e.g. Sarah Johnson" autocomplete="name" required />
         </div>
         <div>
           <label for="phone">Phone Number <span class="req">*</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="e.g. 04XX XXX XXX" required />
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 04XX XXX XXX" autocomplete="tel" required />
         </div>
       </div>
       <div class="form-row">
         <div>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" />
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required />
         </div>
         <div>
           <label for="suburb">Your Suburb <span class="req">*</span></label>
-          <input type="text" id="suburb" name="suburb" placeholder="e.g. Henley Beach" required />
+          <input type="text" id="suburb" name="suburb" placeholder="e.g. Henley Beach" autocomplete="address-level2" required />
+        </div>
+      </div>
+      <div>
+        <label>Best way to contact you</label>
+        <div class="choice-row">
+          <label><input type="radio" name="contact_method" value="Call" checked /> Call</label>
+          <label><input type="radio" name="contact_method" value="SMS" /> SMS</label>
+          <label><input type="radio" name="contact_method" value="Email" /> Email</label>
         </div>
       </div>
       <div>
@@ -234,6 +253,7 @@ gtag('config', 'AW-17194411054');
         <select id="service" name="service" required>
           <option value="" disabled selected>Select a service...</option>
           <option>Carpentry &amp; Timber Work</option>
+          <option>Doors, Windows &amp; Decking</option>
           <option>Plastering &amp; Gyprock</option>
           <option>Property Maintenance</option>
           <option>Renovation &amp; Fit-Out</option>
@@ -243,17 +263,49 @@ gtag('config', 'AW-17194411054');
       </div>
       <div>
         <label for="message">Describe the Job <span class="req">*</span></label>
-        <textarea id="message" name="message" placeholder="Tell Paul what needs doing — as much or as little detail as you have. Don't worry if you're not sure exactly what's needed." required></textarea>
+        <textarea id="message" name="message" placeholder="What's the problem, roughly how big, and anything Paul should know about access. Don't worry if you're not sure exactly what's needed." required></textarea>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="timeframe">When do you need it done? <span class="req">*</span></label>
+          <select id="timeframe" name="timeframe" required>
+            <option value="" disabled selected>Select...</option>
+            <option>Urgent — unsafe or not secure</option>
+            <option>Within 2 weeks</option>
+            <option>Within a month</option>
+            <option>Just getting prices</option>
+          </select>
+        </div>
+        <div>
+          <label for="heard">How did you hear about us?</label>
+          <select id="heard" name="heard_about_us">
+            <option value="" selected>Select...</option>
+            <option>Google</option>
+            <option>hipages</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Friend or family</option>
+            <option>Saw us on a job</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="check-label"><input type="checkbox" name="insurance_claim" value="Yes" /> This is an insurance claim — Paul can provide an insurance-ready quote</label>
       </div>
       <div>
         <label>Photos (Optional)</label>
-        <div class="file-upload-wrap" onclick="document.getElementById('photos').click()">
-          <label class="file-upload-label" for="photos">
-            <div class="upload-icon">📷</div>
-            <div class="upload-text"><strong>Click to attach photos</strong><br>A photo of the job helps Paul give you a more accurate quote</div>
-          </label>
-          <input type="file" id="photos" name="photos" accept="image/*" multiple />
+        <div class="file-upload-wrap">
+          <div class="upload-icon">📷</div>
+          <div class="upload-text"><strong>Add up to 3 photos</strong><br>A close-up of the problem plus one wider shot helps Paul give you an accurate quote</div>
+          <div class="photo-inputs">
+            <input type="file" id="photo1" name="photo1" accept="image/*" aria-label="Photo 1" />
+            <input type="file" id="photo2" name="photo2" accept="image/*" aria-label="Photo 2" />
+            <input type="file" id="photo3" name="photo3" accept="image/*" aria-label="Photo 3" />
+          </div>
         </div>
+        <span class="field-help">Trouble uploading or got more photos? Just reply to Paul's email with them attached.</span>
+        <span class="field-warn" id="photo-warn" hidden>Those photos are too large to send here (8MB total). Please send them by replying to Paul's email instead.</span>
       </div>
       <button type="submit" class="submit-btn">Send My Request to Paul →</button>
       <p class="form-note">By submitting you agree to Paul contacting you about this job. No spam — ever.</p>
@@ -279,14 +331,26 @@ gtag('config', 'AW-17194411054');
 </footer>
 
 <script>
-// Show filename when photo selected
-document.getElementById('photos').addEventListener('change', function() {
-  const count = this.files.length;
-  const uploadText = document.querySelector('.upload-text');
-  if (count > 0) {
-    uploadText.innerHTML = '<strong>' + count + ' photo' + (count > 1 ? 's' : '') + ' selected</strong><br><span style="color:var(--accent)">Click to change</span>';
+(function () {
+  var form = document.querySelector('form[name="quote-request"]');
+  var files = ['photo1', 'photo2', 'photo3'].map(function (id) { return document.getElementById(id); });
+  var warn = document.getElementById('photo-warn');
+  var LIMIT = 7.5 * 1024 * 1024; // Netlify Forms caps each submission at 8MB
+  function totalSize() {
+    return files.reduce(function (t, el) { return t + (el.files[0] ? el.files[0].size : 0); }, 0);
   }
-});
+  files.forEach(function (el) {
+    el.addEventListener('change', function () {
+      if (totalSize() > LIMIT) { el.value = ''; warn.hidden = false; } else { warn.hidden = true; }
+    });
+  });
+  // Email subject e.g. "Quote request – Handyman & General Repairs – Forestville (URGENT)"
+  form.addEventListener('submit', function () {
+    var type = form.service.value || 'Job';
+    var urgent = /^Urgent/.test(form.timeframe.value) ? ' (URGENT)' : '';
+    document.getElementById('form-subject').value = 'Quote request – ' + type + ' – ' + form.suburb.value + urgent;
+  });
+})();
 </script>
 
 
